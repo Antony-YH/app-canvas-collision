@@ -1,3 +1,4 @@
+// main_colision.js
 (() => {
     const canvas = document.getElementById("canvas-colision");
     const ctx = canvas.getContext("2d");
@@ -7,7 +8,8 @@
     class Circle {
         constructor(x, y, radius, color, text, speed) {
             this.posX = x; this.posY = y; this.radius = radius;
-            this.baseColor = color; this.color = color;
+            this.baseColor = color; 
+            this.color = color;
             this.text = text; this.speed = speed;
             this.dx = (Math.random() - 0.5) * this.speed * 4;
             this.dy = (Math.random() - 0.5) * this.speed * 4;
@@ -30,7 +32,8 @@
             if ((this.posX + this.radius) > width || (this.posX - this.radius) < 0) this.dx = -this.dx;
             if ((this.posY + this.radius) > height || (this.posY - this.radius) < 0) this.dy = -this.dy;
             this.posX += this.dx; this.posY += this.dy;
-            this.color = this.isColliding ? "#ff0055" : this.baseColor; // Rojo fuego al chocar
+            // Cambia a ROJO al colisionar, de lo contrario es azul
+            this.color = this.isColliding ? "#ff0055" : this.baseColor; 
             this.draw(context);
         }
     }
@@ -43,7 +46,8 @@
             let x = Math.random() * (width - radius * 2) + radius;
             let y = Math.random() * (height - radius * 2) + radius;
             let speed = Math.random() * 2 + 1;
-            circles.push(new Circle(x, y, radius, "#00f3ff", i + 1, speed));
+            // Círculos AZULES
+            circles.push(new Circle(x, y, radius, "#00bbff", i + 1, speed));
         }
     }
     function detectCollisions() {

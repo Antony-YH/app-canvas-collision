@@ -1,3 +1,4 @@
+// main_rebote.js
 (() => {
     const canvas = document.getElementById("canvas-rebote");
     const ctx = canvas.getContext("2d");
@@ -7,7 +8,8 @@
     class Circle {
         constructor(x, y, radius, color, text, speed) {
             this.posX = x; this.posY = y; this.radius = radius;
-            this.baseColor = color; this.color = color;
+            this.baseColor = color; 
+            this.color = color;
             this.text = text; this.speed = speed;
             this.dx = (Math.random() - 0.5) * speed * 4;
             this.dy = (Math.random() - 0.5) * speed * 4;
@@ -17,13 +19,13 @@
             context.beginPath();
             context.fillStyle = this.color;
             context.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2);
-            context.fill(); // Relleno sólido
+            context.fill(); 
             
-            context.strokeStyle = "rgba(255, 255, 255, 0.8)"; // Borde blanco suave
+            context.strokeStyle = "rgba(255, 255, 255, 0.8)"; 
             context.lineWidth = 2;
             context.stroke();
 
-            context.fillStyle = "white"; // Texto siempre blanco
+            context.fillStyle = "white"; 
             context.textAlign = "center";
             context.textBaseline = "middle";
             context.font = "bold 16px Arial";
@@ -34,7 +36,8 @@
             if ((this.posX + this.radius) > width || (this.posX - this.radius) < 0) this.dx = -this.dx;
             if ((this.posY + this.radius) > height || (this.posY - this.radius) < 0) this.dy = -this.dy;
             this.posX += this.dx; this.posY += this.dy;
-            this.color = this.isColliding ? "#ffcc00" : this.baseColor; // Amarillo neón al rebotar
+            // Cambia a AMARILLO al rebotar, de lo contrario es naranja
+            this.color = this.isColliding ? "#ffcc00" : this.baseColor; 
             this.draw(context);
         }
     }
@@ -47,7 +50,8 @@
             let x = Math.random() * (width - radius * 2) + radius;
             let y = Math.random() * (height - radius * 2) + radius;
             let speed = Math.random() * 2 + 1;
-            circles.push(new Circle(x, y, radius, "rgba(0, 243, 255, 0.4)", i + 1, speed)); // Fondo del círculo translúcido
+            // Círculos NARANJAS (translúcidos para un mejor efecto)
+            circles.push(new Circle(x, y, radius, "rgba(255, 46, 203, 0.64)", i + 1, speed)); 
         }
     }
     function detectCollisions() {

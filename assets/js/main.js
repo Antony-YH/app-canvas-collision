@@ -1,3 +1,4 @@
+// main.js
 (() => {
     const canvas = document.getElementById("canvas-movimiento");
     const ctx = canvas.getContext("2d");
@@ -7,7 +8,8 @@
     class Circle {
         constructor(x, y, radius, color, text, speed) {
             this.posX = x; this.posY = y; this.radius = radius;
-            this.color = color; this.text = text; this.speed = speed;
+            this.color = color; 
+            this.text = text; this.speed = speed;
             this.dx = (Math.random() - 0.5) * this.speed * 4;
             this.dy = (Math.random() - 0.5) * this.speed * 4;
         }
@@ -17,7 +19,7 @@
             context.lineWidth = 3;
             context.arc(this.posX, this.posY, this.radius, 0, Math.PI * 2, false);
             context.stroke();
-            context.fillStyle = "white"; // Texto blanco
+            context.fillStyle = "white"; 
             context.textAlign = "center";
             context.textBaseline = "middle";
             context.font = "bold 16px Arial";
@@ -40,7 +42,8 @@
             let x = Math.random() * (width - radius * 2) + radius;
             let y = Math.random() * (height - radius * 2) + radius;
             let speed = Math.random() * 2 + 1;
-            circles.push(new Circle(x, y, radius, "#00f3ff", i + 1, speed)); // Cian Neón
+            // Círculos VERDES
+            circles.push(new Circle(x, y, radius, "#00ff88", i + 1, speed));
         }
     }
     function updateCircle() {
