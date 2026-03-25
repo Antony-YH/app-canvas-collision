@@ -51,7 +51,7 @@
             let y = Math.random() * (height - radius * 2) + radius;
             let speed = Math.random() * 2 + 1;
             // Círculos NARANJAS (translúcidos para un mejor efecto)
-            circles.push(new Circle(x, y, radius, "rgba(255, 46, 203, 0.64)", i + 1, speed)); 
+            circles.push(new Circle(x, y, radius, "rgba(255, 67, 4, 0.67)", i + 1, speed)); 
         }
     }
     function detectCollisions() {
