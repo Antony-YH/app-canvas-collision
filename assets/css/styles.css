@@ -1,8 +1,19 @@
+/* style.css */
 body {
-  margin: 0;
-  font-family: Arial, sans-serif;
-  background: url("../img/fondo.jpg") no-repeat center center/cover;
-  min-height: 100vh;
+    font-family: 'Segoe UI', system-ui, sans-serif;
+    margin: 0;
+    color: white;
+    
+    /* 1. Capa oscura semitransparente (rgba) para oscurecer la imagen
+       2. La ruta a tu imagen (ajusta la ruta según tus carpetas) */
+    background: linear-gradient(rgba(10, 10, 20, 0.7), rgba(10, 10, 20, 0.7)), 
+                url('/assets/img/fondo.jpg');
+    
+    /* Ajustes para que la imagen se vea perfecta */
+    background-size: cover; /* Cubre toda la pantalla */
+    background-position: center; /* Centra la imagen */
+    background-attachment: fixed; /* Hace que el fondo no se mueva al hacer scroll */
+    background-repeat: no-repeat;
 }
 
 /* Puedes borrar el bloque de @keyframes gradientBG que tenías antes, ya no se usará */
