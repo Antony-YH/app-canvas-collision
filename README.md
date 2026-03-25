@@ -53,17 +53,16 @@ El escenario más complejo. Las partículas no solo detectan la colisión, sino 
         └── main_rebote.js  # Matemáticas de trigonometría y colisión elástica del Escenario 3
 ```
 
-⚙️ Instalación y Despliegue
-Este proyecto no requiere de dependencias complejas, Node.js ni bases de datos. Es 100% Frontend Client-Side.
+## ⚙️ Instalación y Despliegue
 
-Clona el repositorio o descarga el código fuente:
+Este proyecto no requiere de dependencias complejas, Node.js ni bases de datos. Es **100% Frontend Client-Side**.
 
-Bash
-git clone [https://github.com/tu-usuario/simulador-colisiones-2d.git](https://github.com/tu-usuario/simulador-colisiones-2d.git)
-Abre el proyecto:
-Simplemente haz doble clic sobre el archivo index.html para abrirlo en cualquier navegador web moderno (Chrome, Edge, Firefox, Safari).
+1. **Clona el repositorio** o descarga el código fuente:
 
-👨‍💻 Autor
+   ```bash
+   git clone [https://github.com/tu-usuario/simulador-colisiones-2d.git](https://github.com/tu-usuario/simulador-colisiones-2d.git)
+
+## 👨‍💻 Autor
 Diseñado y desarrollado por Antonio Yáñez Hernández | © 2026
 Materia de Graficacion - ITP
 
