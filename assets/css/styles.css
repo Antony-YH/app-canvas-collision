@@ -7,7 +7,7 @@ body {
     /* 1. Capa oscura semitransparente (rgba) para oscurecer la imagen
        2. La ruta a tu imagen (ajusta la ruta según tus carpetas) */
     background: linear-gradient(rgba(10, 10, 20, 0.7), rgba(10, 10, 20, 0.7)), 
-                url('//assets/img/fondo.jpg');
+                url('../img/fondo.jpg');
     
     /* Ajustes para que la imagen se vea perfecta */
     background-size: cover; /* Cubre toda la pantalla */
